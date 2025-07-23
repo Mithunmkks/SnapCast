@@ -8,9 +8,13 @@ export async function middleware(request: NextRequest) {
     headers: await headers(),
   });
 
-  if (!session) {
-    return NextResponse.redirect(new URL("/sign-in", request.url));
-  }
+  // if (!session) {
+  //   return NextResponse.redirect(new URL("/sign-in", request.url));
+  // }
+    if (!session) {
+        const { NextResponse } = await import("next/server");
+        return NextResponse.redirect(new URL("/sign-in", request.url));
+    }
 
   return NextResponse.next();
 }
