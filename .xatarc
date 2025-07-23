@@ -1,0 +1,6 @@
+{
+  "databaseURL": "https://Mithun-Gupta-s-workspace-6kt3nf.us-east-1.xata.sh/db/SnapCast",
+  "codegen": {
+    "output": "src/xata.ts"
+  }
+}
